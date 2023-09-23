@@ -22,6 +22,7 @@ connectDB(DATABASE_URL,DBNAME);
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'))
+app.use(express.json());
 
 //load routes
 app.use('/student', studentRouter)
