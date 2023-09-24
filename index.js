@@ -22,7 +22,7 @@ connectDB(DATABASE_URL,DBNAME);
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'))
-app.use(express.json());
+app.use(express.json()); // to store json data in database
 
 //load routes
 app.use('/student', studentRouter)
